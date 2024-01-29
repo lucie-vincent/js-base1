@@ -1,10 +1,30 @@
-const carre = document.querySelector(".carre");
+let carre = document.querySelector(".carre");
 // const carreInfos = carre.value;
+let carreStyle = window.getComputedStyle(carre, null);
+
+/*afficher les infos
+class :
+background color : carreStyle.backgroundColor
+color : carreStyle.color
+height : carreStyle.height
+width : carreStyle.width
+display : carreStyle.display
+police : carreStyle.font
+
+*/ 
+
 
 function afficherInfos() {
-    // alert(`${console.log(carreInfos)}`);
-    alert("Class: carre\n -Background color: rgb(47, 79, 79)\n -Height: 200\n -Width: 200\n -Display: flex\n -Display: \"Times New Roman\"(40px)");
+    alert(`Class : \n
+    - BackgroundColor : ${carreStyle.backgroundColor}:\n
+    - Color : ${carreStyle.color}\n
+    - Height : ${carreStyle.height}\n
+    - Width : ${carreStyle.width}\n
+    - Display : ${carreStyle.display}\n
+    - Police : ${carreStyle.font}\n
+    `);
 }
+
 
 carre.addEventListener('click', afficherInfos);
 
